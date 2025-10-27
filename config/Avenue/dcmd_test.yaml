@@ -43,7 +43,7 @@ channels: [512,256,512] # channels for the encoder
 
 
 ### Training's configuration
-
+limit_test_batches: 0.3
 ## Diffusion's configuration
 noise_steps: 10 # how many diffusion steps to perform
 
