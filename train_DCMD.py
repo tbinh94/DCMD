@@ -78,7 +78,7 @@ if __name__== '__main__':
     
     trainer = pl.Trainer(accelerator=args.accelerator, devices=args.devices, default_root_dir=args.ckpt_dir, max_epochs=args.n_epochs, 
                          logger=wandb_logger, callbacks=callbacks, strategy=DDPStrategy(find_unused_parameters=False),
-                         log_every_n_steps=20, num_sanity_val_steps=0, deterministic=True,
+                         log_every_n_steps=20, num_sanity_val_steps=0, deterministic=True, limit_train_batches=0.2,
                          #fast_dev_run=True
                          )
     

@@ -33,7 +33,7 @@ if __name__== '__main__':
         
         # Initialize trainer and test
         trainer = pl.Trainer(accelerator=args.accelerator, devices=args.devices[:1],
-                             default_root_dir=args.ckpt_dir, max_epochs=1, logger=False,
+                             default_root_dir=args.ckpt_dir, max_epochs=1, logger=False, limit_test_batches=0.3
                              # limit_test_batches=1 # để test nhanh 2 batch kiểm lỗi
                              ) 
                              
